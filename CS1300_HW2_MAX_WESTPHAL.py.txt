@@ -1,0 +1,54 @@
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+birth_year = int(input("Enter your birth year: "))
+hobby = input("Enter your favorite hobby: ")
+first_name = first_name.title()
+last_name = last_name.title()
+age = 2026 - birth_year
+border = "=" * 36
+line = "-" * 36
+print(border)
+print(f"Name: {first_name} {last_name}")
+print(f"Age: {age}")
+print(f"Hobby: {hobby}")
+print(line)
+print("Thank you for creating your profile!")
+print(border)
+
+
+
+
+
+
+
+sentence = input("Enter a sentence: ")
+
+total_with_spaces = len(sentence)
+
+total_without_spaces = len(sentence.replace(" ", ""))
+
+words = len(sentence.split())
+
+vowels = "aeiouAEIOU"
+vowel_count = sum(1 for char in sentence if char in vowels)
+
+upper_version = sentence.upper()
+lower_version = sentence.lower()
+
+reversed_sentence = sentence[::-1]
+
+starts_capital = sentence[0].isupper() if sentence else False
+
+ends_punctuation = sentence.endswith((".", "!", "?"))
+
+print("=== TEXT ANALYZER ===")
+print("--- Analysis Results ---")
+print(f"Total characters (with spaces):    {total_with_spaces}")
+print(f"Total characters (without spaces): {total_without_spaces}")
+print(f"Number of words:                   {words}")
+print(f"Number of vowels:                  {vowel_count}")
+print(f"Uppercase version:                 {upper_version}")
+print(f"Lowercase version:                 {lower_version}")
+print(f"Reversed:                          {reversed_sentence}")
+print(f"Starts with capital:               {'Yes' if starts_capital else 'No'}")
+print(f"Ends with punctuation:             {'Yes' if ends_punctuation else 'No'}")
